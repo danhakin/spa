@@ -12,3 +12,7 @@ These dependencies are:
 
 * jQuery (http://jquery.com/)
 * jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor)
+
+Shell modules
+--
+The architecture of this SPA is composed of modules named shells, each shell encapsulates a feature and serves as a feature container. This allows to decouple application features and provides modularity.
