@@ -68,22 +68,3 @@ strong {
 }
 
 /** End utility selectors */
-
-
-div{
-    background-color: white;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-
-.spa-slider{
-    position: absolute;
-    bottom: 0px;
-    right: 2px;
-    width: 300px;
-    height: 16px;
-    cursor: pointer;
-    border-radius: 8px 0 0 0;
-    background-color: #336699;
-}       
