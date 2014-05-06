@@ -11,7 +11,9 @@ Although this project uses mainly pure javascript, some dependencies are needed 
 These dependencies are:
 
 * jQuery (http://jquery.com/)
-* jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor)
+* jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor) 
+  
+jQuery uriAnchor is used to control url in browsers, to handle the correct use of back and forward buttons in the SPA.
 
 Shell modules
 --
