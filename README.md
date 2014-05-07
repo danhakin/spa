@@ -13,7 +13,7 @@ These dependencies are:
 * jQuery (http://jquery.com/)
 * jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor) 
   
-jQuery uriAnchor is used to control url in browsers, to handle the correct use of back and forward buttons in the SPA.
+Since SPA are supossed to run in the client all the time, no more pages refresh at each new page, some common user interactions such as the back button are impacted, so we need to guarantee that these behaviors continue to work as the user expects. In this case, jQuery uriAnchor is used to control browser urls and history to take care of these interactions. 
 
 Shell modules
 --
