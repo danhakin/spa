@@ -13,8 +13,7 @@ These dependencies are:
 * jQuery (http://jquery.com/)
 * jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor) 
   
-Since SPA are supossed to run in the client all the time, no more pages refresh at each new page, some common user interactions such as the back button are impacted, so we need to guarantee that these behaviors continue to work as the user expects. In this case, jQuery uriAnchor is used to control browser urls and history to take care of these interactions. 
 
-Shell modules
+Shell module
 --
-The architecture of this SPA is composed of modules named shells, each shell encapsulates a feature and serves as a feature container. This allows to decouple application features and provides modularity.
+The architecture of this SPA is composed of a central module named shell. This module is responsible for application-wide tasks like management of the URI anchor or cookies, and it dispatches specific tasks to carefully isolated feature modules.
