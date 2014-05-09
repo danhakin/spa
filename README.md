@@ -17,3 +17,7 @@ These dependencies are:
 Shell module
 --
 The architecture of this SPA is composed of a central module named shell. This module is responsible for application-wide tasks like management of the URI anchor or cookies, and it dispatches specific tasks to carefully isolated feature modules.
+
+Feature modules
+--
+In order to improve modularity in the SPA, we use the notion of feature module, which encapsulates an application feature in his own. Each feature module define his own MVC model, and together conform a sort of MVC Fractal model. These feature modules are orchestrated by the Shell and share the same structure.
