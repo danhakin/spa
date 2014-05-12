@@ -30,18 +30,21 @@ spa.shell = (function () {
                     + '<div class="spa-shell-main-content"></div>' 
                 + '</div>' 
                 + '<div class="spa-shell-foot"></div>' 
-                + '<div class="spa-shell-modal"></div>'
+                + '<div class="spa-shell-modal"></div>',
+            resize_interval : 200
         },
         stateMap  = { 
             $container        : null,
             anchor_map        : {},
-            is_chat_retracted : true
+            is_chat_retracted : true,
+            resize_idto       : undefined
         },
         jqueryMap = {},
         copyAnchorMap,
         setJQueryMap,
         changeAnchorPart,
         onHashChange,
+        onResize,
         setChatAnchor,
         initModule;
     
@@ -189,6 +192,29 @@ spa.shell = (function () {
         return false;
     };
     
+    
+    
+    /**    
+     * 
+     * @returns {type} Description    
+     */
+    onResize = function () {
+        if ( stateMap.resize_idto ) { return true; }
+        
+        spa.chat.handleResize();
+        
+        // ser a timeout function to reset resize_idto to undefined
+        // every 200ms to allow handleResize to execute
+        stateMap.resize_idto = setTimeout(
+            function () { stateMap.resize_idto = undefined; },
+            configMap.resize_interval
+        );
+        
+        // returns true, to prevent jQuery from doing preventDefault or 
+        // stopPropagation
+        return true;
+    };
+    
     /*** Callback methods ***/
     
     
@@ -230,6 +256,7 @@ spa.shell = (function () {
         // the trigger event, which is used to ensure the anchor
         // is considered on-load
         $(window)
+            .bind( 'resize', onResize )
             .bind( 'hashchange', onHashChange )
             .trigger( 'hashchange' );
     };
