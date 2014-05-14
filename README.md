@@ -11,7 +11,10 @@ Although this project uses mainly pure javascript, some dependencies are needed 
 These dependencies are:
 
 * jQuery (http://jquery.com/)
-* jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor) 
+* jQuery uriAnchor plugin (https://github.com/mmikowski/urianchor)
+* jQuery event.gevent - Global event handler (https://github.com/mmikowski/jquery.event.ue)
+* JQuery event.ue - Unified mouse and touch events (https://github.com/mmikowski/jquery.event.gevent)
+* TaffyDB - Javascript DB (http://www.taffydb.com/)
   
 
 Shell module
